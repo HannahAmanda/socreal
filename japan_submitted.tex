@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage{authblk}
+\setlength{\textheight}{655pt} % = 592pt
+\setlength{\textwidth}{370pt} % = 345pt
+\setlength{\topmargin}{0pt} % = 20pt
+\setlength{\voffset}{-35pt} % = 0pt
+\setlength{\headsep}{20pt} %= 25pt
+
+\usepackage{fullpage}
+\usepackage[curve]{xypic}
+ \usepackage{amssymb,amsmath, url,proof,bussproofs} 
+\usepackage[usenames,dvipsnames]{color}
+
+\newcommand{\noo}[1]{}
+\newcommand{\ptrue}{\sf S}
+\newcommand{\pp}{\mathcal P}
+\newcommand{\defdby}{\by={def}}  
+\newcommand{\naboComp}[1]{{\cal E}(#1)}
+\newcommand{\CAP}{\bigcap}
+\newcommand{\ungr}[1]{\underline{#1}}
+\newcommand{\conc}[1]{} 
+\newcommand{\objects}{{\cal O}}
+\newcommand{\facts}{{\cal F}}
+\newcommand{\states}{{\cal S}}
+\newcommand{\powers}{{\cal P}}
+\newcommand{\disp}{{\cal D}}
+\newcommand{\cause}{{\cal C}}
+\newcommand{\dispcomb}{{\pi}}
+\newcommand{\irr}{{\cal I}}
+
+\bibliographystyle{apalike}
+
+\hyphenation{}
+\newcommand{\rag}[1]{\textbf{\textcolor{magenta}{(R: #1)}}}
+\newcommand{\sjur}[1]{\textbf{\textcolor{blue}{(S: #1)}}}
+\newcommand{\hannah}[1]{\textbf{\textcolor{OliveGreen}{(H: #1)}}}
+
+\begin{document}
+
+\title{Contemplating counterfactuals: On the connection between agency and metaphysical possibility}
+\author[1]{Sjur K. Dyrkolbotn \thanks{s.k.dyrkolbotn@durham.ac.uk}}
+\author[2]{Ragnhild H. Jordahl \thanks{ragnhild.jordahl@gmail.com}}
+\author[3]{Hannah A. Hansen \thanks{hannaha.hansen@gmail.com}}
+\affil[1]{Durham Law School, Durham University, UK}
+\affil[2]{Department of Philosophy, University of Bergen, Norway}
+\affil[3]{Department of Information Science and Media Studies, University of Bergen, Norway}
+
+\date{}
+\maketitle
+
+\section*{Extended Abstract}
+
+We consider the connection between the metaphysics of modality and the philosophy of agency and free will, focusing particularly on how the give-and-take relationship between possibility and agency is captured in formal logics that have been proposed to model multi-agent systems in the context of artificial intelligence research. We argue that philosophical insights can be gained from looking to these formalisms, and that they tend to carry with them implicit philosophical commitments and implications that we must consider if we are to understand their broader meaning. Moreover, philosophical assessment appears especially relevant when formal logics are looked at from the context of social reality, a reality that has increasingly come to include social structures that have been designed with the aid of formal tools, and within which social interaction involves both real and artificial agents.\footnote{The growing importance of the social web over the last 10-15 years serves as an obvious example of this 
+development.} In addition, it seems that philosophy has something to offer to the development of the technical apparatus, in suggesting interesting directions for future developments that build on notions that have been considered in a philosophical context.
+
+In the first part of this paper, we argue for the philosophical claim that the connection between metaphysical modality and agency is  significant and should be taken into account in order to arrive at a proper understanding of either of these notions. We observe, in particular, that agency appears to feature crucially in important metaphysical arguments concerning possibility, while metaphysical possibility seem to be at play in important arguments concerning agency. 
+
+In the second part of the paper, we consider and compare logical approaches to modeling agency and logical models used to elaborate on metaphysical theories of modality. We focus attention on \emph{branching time temporal logics}, and we relate these to the recently proposed \emph{dispositional} account of modality, see \cite{dispmod,MwPw}. The dispositional account makes the connection between possibility, causation and agency clearer, and it has been backed up by formalisms and semi-formalisms that bear close resemblance to many logics considered in the theory of multi-agent systems and in the philosophy of agency, see \cite{powmod,PhDpos}. We give a brief description and overview of the frameworks that have been developed, and we suggest that the relationships between proposals emerging from different strands of thought should be considered further. Moreover, it seems that by making the connection between metaphysical modality and agency, we can shed new light on a number of well-known issues, both from 
+philosophy and the theory of multi-agent systems.
+
+In the remainder of the extended abstract, we elaborate briefly on the main points of the paper.
+
+\subsection*{Agency in the metaphysics of possibility}
+
+One of the main controversies in contemporary work on metaphysical modality arises from the tension between the theories of Lewis and Kripke respectively \cite{KripkeNN,KripkeIN,LewisPW,LewisCPB}. Both Lewis and Kripke build on the account given by Leibniz \cite{Theodicy}, who held that something is possible if and only it is true in some possible world, and necessary if and only it is true in all of them. However, where Lewis' theory relies on an ontology which posits the existence of concretely existing possible worlds, completely separated from our own, Kripke's theory is based on an \emph{actualistic} understanding of possible worlds; what actually exists is taken to be that which is part of our world, and all that is possible must, in principle, originate from this actuality.
+
+It is commonly accepted that a powerful argument can be made against Lewis' theory by considering \emph{identity} and \emph{de re} modal claims, that is, claims about what is possible for a particular existing object, the identity of which we know in the actual world. How can it be, for instance, that something which is possible for \emph{me} is witnessed by the existence of some other world, all the while I myself am part of this one? Lewis answers by saying that what is possible for me is witnessed by something which obtains in some possible world for someone who is not me, but is very much like me, namely my \emph{counterpart} \cite{LewisCPB}. 
+
+This answer is held by many to be an affront to our intuitive understanding of modality. In a famous thought experiment \cite{KripkeNN}, Kripke makes this point by considering the possibility that Humphrey won the 1968 US presidential election. Why exactly would Humphrey care if someone very much like him won the election? Surely, when contemplating the possibility of victory, Humphrey is thinking about \emph{himself}?
+
+Kripke's argument, and the question of identity across possible worlds more generally, seems to owe much of its significance from considerations rooted in agency. But as far as we are aware, the relevant form of modal agency, involving agents \emph{contemplating} on the possible, has not received any significany explicit attention in metaphysical work. However, as the Humphrey thought experiment suggests, it appears to be present, just below the surface. The de re modal claims, in particular, invariably involve concrete objects, and for a satisfactory philosophical account of such claims, it appears crucial that we take into account that they arise when we engage in thinking about what can happen, or could have happened, and, in particular, what we could have done, or can still do, to influence the world. Of course, modal claims involving objects that are not cognate do not involve \emph{their} modal agency in this way. But even for such objects, it certainly appears true that whenever a modal claim 
+regarding them appears, this is due to some agent engaging in modal reflection that involves these objects.
+
+We will not argue about the exact extent to which modal agency of this kind is a relevant factor when attempting to formulate a philosophical theory of possibility.\footnote{Certainly, we are not proposing that modal agency subsumes or is constitutive of metaphysical possibility; that would involve excluding many possibilities that are often included in a metaphysical account, such as the possibility of a world with no agents (some may want their metaphysical theory to exclude this, but we prefer to remain agnostic about it). We are not, in particular, suggesting any kind of fictionalism about metaphysical possibilities, and the point we are making is not subsumed by previous work in this vein, as that of \cite{ficr,ficrfix}. While agency should also be considered by such theories, their primary concern is with how possible worlds are to be made sense of, and how they come to be. This is not our topic; our argument is that \emph{regardless} of what possible worlds are, it appears that how we \emph{interact} 
+with them in our social lives is relevant, also to the formulation of an appropriate metaphysical theory of possibility.} Rather, our point is that quite some relevance is already attributed to it in existing work, and that metaphysical theories therefore need to address modal agency more explicitly. It also seems clear that when doing so, due note should be taken of the fact that thinking about modality is invariably embedded in structures that are present in physical and social reality.
+
+\subsection*{Metaphysical possibility in the theory of agency and free will}
+
+Metaphysical possibility appears to play an unacknowledged role in relation to philosophical debates concerning agency, and to illustrate this, we will focus particularly on the classical debate about whether or not free will is compatible with determinism. We observe, in particular, that arguments either way tend to involve implicit commitments to a particular interpretation of what is meant by saying that something is possible. It is often argued, for instance, that an agent cannot have free will if determinism is true because determinism means that it is not possible for him to act differently than he is already determined to act. This has been challenged by many authors, however, and it seems that many of these challenges rely on the idea, which might not be explicitly stated, that the sense of possibility relevant for making a judgment about free will is not the physical possibility relevant to the question of determinism, but some other notion of possibility, for which the truth of determinism would 
+not preclude the existence of alternative actions  for an agent.
+
+Towards a simple argument along these lines, one could begin by pointing out that even if the future of the actual physical world is completely determined, there might be another, metaphysically possible world, identical to the actual one except for the fact that the agent \emph{did} act differently. This might then be taken as a witness to the fact that \emph{if} he had wanted to act differently in the actual world, he \emph{could} have done so, and so has free will, even in the presence of determinism. In light of current theories about metaphysical possibility, however, this argument appears weak; if determinism is true, then the fact that an agent could have acted differently if he had wanted to appears vacuous; after all, it is not possible, in the actual world, that he could have wanted this.
+
+But the simple argument in favor of compatibilism can be significantly strengthened if we incorporate a notion of modal agency. Since agents are capable of contemplating metaphysical possibilities, the possibility of alternative actions witnessed by metaphysically possible worlds could plausibly be held to indicate that agents can, by virtue of their contemplation of such worlds, ensure that \emph{to them}, choices appear real. In this way, metaphysical contemplation could come to inform our \emph{attitude} towards both our own actions and the actions of others, and free will would become an emergent feature of social reality, physical determinism notwithstanding.
+
+This is clearly a more subtle argument, echoing the arguments made in \cite{strawsonfree}, but backing them up by allowing us to consider relevant attitudes, like resentment and forgiveness, as being grounded in metaphysical facts concerning what it means to contemplate on the metaphysically possible.\footnote{In short, and somewhat simplified, \cite{strawsonfree} argues that since we have attitudes such as these, and since they appear fundamental to how we interact with one another, it does not make sense to hold that they become meaningless if we assume determinism, unless determinism itself is meaningless. On the other hand, since these attitudes seem to presuppose free will, it appears that free will remains meaningful, irrespective of whether or not determinism is true.} Certainly, it might be debated whether or not this is actually a convincing argument that free will and determinism is compatible. However, by taking modal agency into account, we have arrived at a richer vantage point which should be 
+helpful to further analysis, both when evaluating existing arguments and also when searching for new ones.\footnote{We mention here the recent argument in favor of compatibilism in \cite{Listfree}, which uses a different terminology, but which we believe can be read as building on a starting point that is, in crucial ways, very similar to ours. This point is elaborated on in the full paper.}
+
+\subsection*{Agency and metaphysical possibility in formal logics}
+
+There is a vast landscape of formal logics that involve agency and possibility, and increasingly, these notions are also considered together, especially in logics for modeling interaction in a multi-agent system, see \cite{IMAS,Benthem}. We would like to stress, however, that possibility is an ambiguous word that is often used in senses that are quite distinct from the notion of metaphysical possibility with which we are concerned here. For instance, while some philosophers think that $S5$ is the logic both of metaphysical and epistemic modality, the different epistemic worlds that an agent considers possible because he cannot distinguish between them certainly do not coincide with the vast multitude of worlds he may consider possible in the metaphysical sense. Certainly, Humphrey knew he lost the election in 1968, but he was still free to contemplate the possibility that this could have been otherwise. Moreover, by doing so, it seems that he would engage in a form of agency, and while this agency would 
+certainly be related to his actions in the actual world (or at least to his attitudes towards those actions), it would not appear to be a form of agency that we can easily reduce to other forms.
+
+Towards formal representation of modal agency, it seems clear that we must turn to \emph{multi-modal} logics, where we can study interactions between a modality representing metaphysical possibility, and another, distinct modality, which can be used for talking about agency involving reflection concerning such possibilities. Multi-modal logics is a rich topic which is being studied from many different angles and it attracts much technical interest, see \cite{multimod}. In this paper, we will focus on multi-modal logics that are based on a branching time notion of possibility. Such logics have attracted much interest in recent work, both in philosophy and AI, and they are particularly interesting because they have been extended in various ways by adding modal operators specifically directed at modeling agency. We point to \cite{stit,dstit,atl,atle,nctl,stitstart} for a collection of work on such formalisms that is relevant to the points we are making in this paper.
+
+It seems, moreover, that in light of recent work on dispositions, the connection between branching time and metaphysical possibility might be closer than what has hitherto been assumed.\footnote{We point to \cite{MwPw} for a survey of recent work on dispositions and possibility} It seems that we may, in light of these new suggestions, consider reinterpretations of the branching time formalisms, viewing transitions between states of the world as resulting from the (possibly counterfactual) \emph{manifestations} of dispositions. Then, the temporal dimension can be understood as modeling the \emph{higher order} (counterfactual) manifestation of (possible) dispositions, as explored informally in \cite{dispmod}, where it is suggested that the notion of possibility that arises in this way can be used to provide a plausible actualistic theory of metaphysically possibility proper.\footnote{We mention that a related development, that also argues for the metaphysical importance of branching time possibility is 
+presented in \cite{realmod}. Here, however, the suggestion is made that branching time possibility is in itself metaphysically basic, in that it gives rise to the \emph{real} notion of metaphysical possibility, which, albeit not as wide as that usually considered, is still wide enough to cover the interesting cases, including those that deserve primary attention in metaphysics.}
+
+In the full paper, we take this point of view further, and we elaborate on various branching time formalisms that have been proposed, focusing on how they incorporate notions of agency, and how they can often be seen to involve several distinct notions of possibility, including a metaphysical notion that should not be conflated to the other ones, especially not in the context of agency. We go on to suggest that the further philosophical study of different systems and the connections between them has the potential to shed light on a number of different, but related, questions, such as the relationship between free will and determinism \cite{Listfree,strawsonfree}, the workings of higher order dispositions \cite{dispmod}, the applicability of notions involving moral responsibility \cite{frankfurt,mensrea}, the nature of necessity and the question of whether or not dispositional possibility is a distinct form of modality \cite{DM,EaM,Los}, and the distinction between knowing that it is possible to do something, 
+and actually knowing \emph{how} to do it \cite{atlhow,atlhowto}. We do not aim to provide any definite answers, but make a methodological point: since all of these questions seem to involve the relationship between agency and a metaphysical notion of possibility, more work should be devoted to studying them in this light.
+
+\bibliography{cite}
+\bibliographystyle{apalike}
+\end{document}
